@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 transition-colors;
+  }
+  
+  .dark body {
+    @apply bg-gray-900 text-gray-50;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Enhanced button system */
+  .btn-base {
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-2.5 text-sm font-medium 
+           transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 
+           disabled:opacity-50;
+  }
+  
+  .btn-primary {
+    @apply btn-base bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 
+           shadow-soft hover:shadow-medium hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply btn-base bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 
+           focus:ring-gray-500 shadow-soft hover:shadow-medium hover:-translate-y-0.5
+           dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700 dark:hover:bg-gray-700;
+  }
+  
+  .btn-outline {
+    @apply btn-base border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 
+           focus:ring-gray-500 dark:border-gray-600 dark:text-gray-300 dark:hover:border-gray-500 
+           dark:hover:bg-gray-800;
+  }
+  
+  /* Enhanced card system */
+  .card {
+    @apply bg-white rounded-2xl shadow-soft border border-gray-200 transition-all duration-300 
+           hover:shadow-medium hover:-translate-y-1 dark:bg-gray-800 dark:border-gray-700;
+  }
+  
+  .card-interactive {
+    @apply card cursor-pointer hover:scale-[1.02];
+  }
+  
+  .card-large {
+    @apply card p-6 lg:p-8;
+  }
+  
+  .card-medium {
+    @apply card p-4 lg:p-6;
+  }
+  
+  .card-small {
+    @apply card p-3 lg:p-4;
+  }
+  
+  /* Enhanced badge system */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-sm {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium;
+  }
+  
+  .badge-primary {
+    @apply badge bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200;
+  }
+  
+  .badge-accent {
+    @apply badge bg-accent-100 text-accent-800 dark:bg-accent-900 dark:text-accent-200;
+  }
+  
+  .badge-purple {
+    @apply badge bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200;
+  }
+  
+  .badge-orange {
+    @apply badge bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200;
+  }
+  
+  .badge-pink {
+    @apply badge bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200;
+  }
+  
+  .badge-gray {
+    @apply badge bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200;
+  }
+
+  /* Enhanced typography */
+  .heading-1 {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-gray-50 leading-tight tracking-tight;
+  }
+  
+  .heading-2 {
+    @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 dark:text-gray-50 leading-tight tracking-tight;
+  }
+  
+  .heading-3 {
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900 dark:text-gray-50 leading-snug;
+  }
+  
+  .heading-4 {
+    @apply text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-50 leading-snug;
+  }
+  
+  .text-muted {
+    @apply text-gray-600 dark:text-gray-400;
+  }
+  
+  .text-large {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+  
+  /* Enhanced focus states */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 
+           dark:focus:ring-offset-gray-900;
+  }
+
+  /* Logo styles */
+  .logo-text {
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
+  }
+}
+
+/* Enhanced scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
